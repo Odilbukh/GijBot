@@ -3,9 +3,8 @@ import telebot
 import datetime
 from telebot import types
 from telegramcalendar import create_calendar
-import config
 
-bot = telebot.TeleBot(config.token)
+bot = telebot.TeleBot(TOKEN)
 
 print(bot.get_me())
 

@@ -20,17 +20,6 @@ def log(message, answer):
                                                                  message.from_user.username))
     print(answer)
 
-def listener(messages):
-    """
-    When new messages arrive TeleBot will call this function.
-    """
-    for m in messages:
-        if m.content_type == 'text':
-            # print the sent message to the console
-            print(str(m.chat.first_name) + " " + (str(m.chat.last_name)) + ": " + " [" + (str(m.chat.username)) + "]: " + " [" + str(m.chat.id) + "]: " + m.text)
-
-
-bot.set_update_listener(listener)  # register listener
 
 
 @bot.message_handler(commands=["start"])
@@ -109,7 +98,6 @@ def menu(message):
         print(str(message.from_user.first_name), ',', str(message.from_user.last_name), ',', str(message.from_user.id),
               ',',
               '@' + str(message.from_user.username), ',', str(message.from_user.language_code))
-
 
 def number(message):
     keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)

@@ -35,7 +35,6 @@ def main_menu(message):
 def menu(message):
     if message.text == "ℹ️ О нас":
         keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        keyboard.add(*[types.KeyboardButton(name) for name in ["Главное меню"]])
         a = "Уютный ресторан в национальном стиле расположился в самом зеленом уголке центра Ташкента, объединив под одной крышей бухарский стиль, европейский темперамент и колорит. \n \n 🏡  Адрес: ул. Лабзак, 103 \n Ориентир: Напротив Колледж Связи и рядом с рестораном Афсона \n ☎️  +998 98 809 22 62 \n 🕘  09:00 - 23:00"
         b = "https://teletype.in/@gijduvonbot/BJF7dmkIm"
         d = "https://teletype.in/@gijduvonbot/rJlR89rwQ"
@@ -48,7 +47,6 @@ def menu(message):
 
     if message.text == "📣 Новости":
         keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        keyboard.add(*[types.KeyboardButton(name) for name in ["Главное меню"]])
         n = "Оставайтесь в курсе новостей и акций. \n<b>Gijduvon Restoran наш официальный сайт:</b>\n👉 http://gijduvon.uz/"
         h = "Ищите нас в социальных сетях. \n Мы в Инстаграме: https://www.instagram.com/restaurant_gijduvon/ \n Наш Фейсбук страница: https://www.facebook.com/gjduvon.kafe"
         bot.send_message(message.chat.id, n, parse_mode="HTML", reply_markup=keyboard)

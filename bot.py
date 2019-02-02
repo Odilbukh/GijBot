@@ -58,7 +58,7 @@ def menu(message):
 
 
     if message.text == "📖 Меню":
-        bot.send_photo(message.chat.id, photo=open('picture/menu.jpg', 'rb'))
+        bot.send_photo(message.chat.id, photo=open('picture/menu.png', 'rb'))
         print(str(message.from_user.first_name), ',', str(message.from_user.last_name), ',', str(message.from_user.id),
               ',',
               '@' + str(message.from_user.username), ',', str(message.from_user.language_code))
